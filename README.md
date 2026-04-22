@@ -34,6 +34,7 @@ This repository contains my Java practice for Data Structures & Algorithms.
 - Day 1: Sorting Algorithms
 - Day 2: Matrix Problems
 - Day 3: String Problems
+- Day 4: Bit Manupulations
 
 ## 💻 Language
 - Java
