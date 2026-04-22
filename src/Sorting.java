@@ -326,12 +326,126 @@ public class Sorting {
     }
     System.out.println(CompressedString);
   }
+  public static void BitwiseEvenOdd(int number){
+    if((number & 1) == 0){
+      System.out.println("given number is EVEN");
+    }else{
+      System.out.println("given number is ODD");
+    }
+  }
+  public static void GetIthBit(int number,int i){
+    int m = 1 << i;
+    if((number&m) == 0) {
+      System.out.println("Ith bit is 0 number = "+number);
+    }else{
+      System.out.println("Ith bit is 1 number = "+number);
+    }
+  }
+  public static void SetIthbit(int number, int i){
+    int m = 1 << i;
+    number = number | m;
+    GetIthBit(number,i);
+  }
+  public static void ClearIthbit(int number,int i){
+    number = number &(~(1<<i));
+    GetIthBit(number,i);
+  }
+  public static void UpdateIthvalue(int number , int i){
+    Scanner input = new Scanner(System.in);
+    int value;
+    System.out.println("enter 0 0r 1 what you want to update on Ith position");
+    value = input.nextInt();
+    if(value == 0){
+      ClearIthbit(number,i);
+    }else if(value == 1){
+      SetIthbit(number,i);
+    }else{
+      System.out.println("This value cannot be entered at Ith bit");
+    }
+  }
+  public static void ClearRangeOfBits(int number, int i, int j){
+    int bitmask;
+    bitmask = ((~0)<<(j+1))|((1<<(i))-1);
+    number = number & bitmask;
+    System.out.println(number);
+  }
+  public static void IsNumberPowerOfTwo(int number){
+    if((number & (number-1)) == 0){
+      System.out.println("yes number is power of 2");
+    }else{
+      System.out.println("no number is not power of 2");
+    }
+  }
+  public static void CountSetBits(int number){
+    int x= number;
+    int count=0;
+    while( number > 0){
+      if((number & 1) == 1){
+        count++;
+        number= number>>1;
+      }else{
+        number= number>>1;
+      }
+    }
+    System.out.println("Number of Set bits in "+x+" is "+count);
+  }
+  public static void FastExponential(int number, int power){
+    int answer = 1;
+    while(power > 0){
+      if((power & 1) != 0){
+        answer = answer * number;
+      }
+      power = power>>1;
+      number *= number;
+    }
+    System.out.println(" Result = "+answer);
+  }
+  public static void BitManupulationQuestions(){
+    Scanner input = new Scanner(System.in);
+    int a,b;
+    System.out.println("enter values of a and b ");
+    a = input.nextInt();
+    b = input.nextInt();
+    System.out.println("values before swapping a = "+a+" b = "+b);
+    a = a^b;
+    b = a^b;
+    a= a^b;
+    System.out.println("values after swapping a = "+a+" b = "+b);
+    System.out.println("now adding 1 to integer a by bit manupulation");
+    a = -(~a);
+    System.out.println("values after adding 1 by bit manupulation in  a = "+a);
+    System.out.println("Enter any string in Uppercase");
+    String Str = input.next();
+    StringBuilder LowerStr = new StringBuilder();
+    System.out.println("string is converted to lowecase with bitmanupulation");
+
+    for(int i = 0; i<Str.length(); i++){
+     char ch = Str.charAt(i);
+     ch = (char)(ch | ' ');
+     LowerStr.append(ch);
+    }
+    System.out.println(LowerStr);
+  }
   public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     String name ;
-    System.out.println("enter any string ");
-    name = input.next();
-             CompressString(name);
+    int number ;
+    int i;
+    //System.out.println("enter any number and power ");
+    //number= input.nextInt();
+    //i= input.nextInt();
+    //name = input.next();
+             BitManupulationQuestions();
+             //FastExponential(number,i);
+             //CountSetBits(number);
+             //IsNumberPowerOfTwo(number);
+             //ClearRangeOfBits(number,i,4);
+             //UpdateIthvalue(number,i);
+             //ClearIthbit(number,i);
+             //GetIthBit(number,i );
+             //SetIthbit(number,i);
+             //BitwiseEvenOdd(number);
+             //CompressString(name);
              //StringsBuilder(name);
              //LargestString();
              //System.out.println("Pallindrome "+IsStringPallindrome(name));
