@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main {
+public class PracticeQuestions {
     public static void p1(int a, int b) {
 
         int sum = a + b;
@@ -341,6 +341,49 @@ public class Main {
         }
         System.out.println("HCF = "+hcf);
     }
+    public static void CheckPrime(int a){
+        for(int i=2; i<a; i++){
+            if(a%i == 0){
+                System.out.println("Not prime");
+                break;
+            }
+
+        }
+        System.out.println("Yes prime ");
+    }
+    public static void SumOfNaturals(int a){
+        int sum =0;
+        for(int i=1; i<=a; i++){
+            sum +=i;
+        }
+        System.out.println("sum od n naturals no. = "+ sum);
+    }
+    public static void Fabonacci(int n){
+        int a=1;
+        int b=1;
+        System.out.println("1");
+        for(int i=2; i<=n; i++){
+            System.out.println(b);
+            int c=a;
+            a = b;
+            b=c+b;
+
+
+        }
+
+    }
+    public static void countEvenOddDigits(int a){
+        int even =0;
+        int odd =0;
+        while(a>0){
+            if(a%2 == 0){
+                even++;
+            }else{
+                odd++;
+            }
+        }
+        System.out.println("even = "+even+" odd = "+odd);
+    }
     public static void Natural(){
         for(int i =1; i<=100; i++){
             System.out.print(i + " ");
@@ -432,6 +475,16 @@ public class Main {
         number = (number/10)*10+first;
         System.out.println("no after swappinf f and l digits = "+ number);
     }
+    public static void Sum(int a,int b) {
+        System.out.println(" sum = " + (a + b));
+    }
+    public static int Square(int a){
+        return (a*a);
+    }
+    public static void HelloJava(){
+        System.out.println("Hello Java");
+    }
+    
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -476,7 +529,12 @@ public class Main {
         //SwapWithXOR(l,b);
         //CountDigits(l);
         //ArmStrong(l);
-        StronNumber(l);
+        //StronNumber(l);
+        //Fabonacci(l);
+        //CheckPrime(l);
+        //SumOfNaturals(l);
+        //countEvenOddDigits(l);
+
         //LCM(l,b);
         //HCF(l,b);
         //Pallindrome(l);
