@@ -484,7 +484,22 @@ public class PracticeQuestions {
     public static void HelloJava(){
         System.out.println("Hello Java");
     }
-    
+    public static void PairCounting(int n){
+        int count=0;
+        for(int i=1; i<n;i++){
+            for(int j=i+1; j<=n; j++){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+    public static void OrderdPair(int x){
+        for(int i=1; i<=x;i++){
+            for(int j=i;j<=x;j++){
+                System.out.println("("+i+" , "+j+")");
+            }
+        }
+    }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -494,7 +509,7 @@ public class PracticeQuestions {
         //float radius = input.nextFloat();
        System.out.println("enter no1,no2 and operator'+,-,*,/'");
         int l = input.nextInt();
-        int b = input.nextInt();
+       // int b = input.nextInt();
         //int a = input.nextInt();
         //char ch = input.next().charAt(0);
         //float length = input.nextFloat();
@@ -550,7 +565,10 @@ public class PracticeQuestions {
         //SwapFLDigits(l);
 
 
-
+        PairCounting(l);
+        OrderdPair(l);
+char arr[] = {'a','b'};
+System.out.println(arr);
 
     }
 }
