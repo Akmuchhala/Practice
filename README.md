@@ -15,6 +15,21 @@ This repository contains my structured practice of **Data Structures and Algorit
 
 ## 📂 Topics Covered
 
+- Classes and Objects
+- Constructors
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Abstraction
+- Method Overloading
+- Method Overriding
+- Static Keyword
+- Arrays and Sorting
+- Bank Management Programs
+- Shape and Area Programs
+- Animal Hierarchy Programs
+- Employee Management Examples
+
 ### 🔢 Sorting Algorithms
 - Bubble Sort (Ascending & Descending)
 - Selection Sort (Ascending & Descending)
